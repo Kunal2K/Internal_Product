@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - InternalProduct</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/InternalProduct.styles.css" asp-append-version="true" />
+    <link href="c:~/content/css/stylesheet.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div class="sidebar">
+        <nav class="navbar navbar-expand-sm border-bottom box-shadow mb-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">InternalProduct</a>
+                </div>
+            </nav>
+        <nav class="nav flex-column">
+            <div class="nav-item px-3">
+                <button class="btn btn-nav" onclick="location.href='/Master'">
+                    <span aria-hidden="true"></span> Master
+                </button>
+            </div>
+            <div class="nav-item px-3">
+                <button class="btn btn-nav" onclick="location.href='/MOS'">MOS</button>
+            </div>
+            <div class="nav-item px-3">
+                <button class="btn btn-nav" onclick="location.href='/MSDS'">MSDS</button>
+            </div>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+        <footer class="border-top footer text-muted mt-4">
+            <div class="container">
+                &copy; 2025 - InternalProduct - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
